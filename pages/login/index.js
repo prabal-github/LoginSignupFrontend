@@ -56,7 +56,9 @@ const Login = () => {
                             className="w-full p-2 border border-gray-300 rounded-l shadow focus:outline-none "
                             placeholder="Enter you email"
                             required
-                        ></input>
+                        >
+
+                        </input>
 
                         <input
                             type="password"
@@ -78,7 +80,6 @@ const Login = () => {
                             </Link>
                             
                         </p>
-
                     </form>
                 </div>
             </div>

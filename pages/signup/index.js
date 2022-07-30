@@ -3,11 +3,11 @@ import axios from 'axios'
 import { useRouter } from 'next/router'
 
 const Signup = () => {
+    
     const router=useRouter();
     const [name, setname] = useState("")
     const [email, setemail] = useState("")
     const [password, setpassword] = useState("")
-
 
     const handleRegister = (e) => {
         e.preventDefault();

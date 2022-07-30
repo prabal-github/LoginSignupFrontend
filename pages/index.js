@@ -6,19 +6,19 @@ const Index = () => {
   const [name, setname] = useState("")
   useEffect(() => {
     if (localStorage.getItem('token')) {
+      setname(jwt_decode(localStorage.getItem('token')).name)
       router.replace('/')
     }
     else {
       router.replace('/login')
     }
-    setname(jwt_decode(localStorage.getItem('token')).name)
   }, [])
 
   const handleLogout = () => {
     localStorage.clear();
     router.push('/login')
   }
-  
+
   const router = useRouter();
 
   return (

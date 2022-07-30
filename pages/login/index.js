@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 import axios from 'axios'
 import { useRouter } from 'next/router'
+import Link from 'next/link'
+
 
 const Login = () => {
 
@@ -69,12 +71,12 @@ const Login = () => {
                             Login
                         </button>
                         <p className="text-sm font-semibold text-black pt-1 mb-0">
-                            Don't have an account?
-                            <a
-                                href="/signup"
-                                className="text-red-600 hover:text-red-700 focus:text-red-700 transition duration-200 ease-in-out"
-                            > Register</a
-                            >
+                            Do not have an account?
+                            <Link href="/signup">
+                                <a className="text-red-600 hover:text-red-700 focus:text-red-700 transition duration-200 ease-in-out"
+                            > Register</a>
+                            </Link>
+                            
                         </p>
 
                     </form>

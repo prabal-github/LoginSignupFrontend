@@ -53,6 +53,7 @@ const Login = () => {
                             onChange={(e) => setemail(e.target.value)}
                             className="w-full p-2 border border-gray-300 rounded-l shadow focus:outline-none "
                             placeholder="Enter you email"
+                            required
                         ></input>
 
                         <input
@@ -61,6 +62,7 @@ const Login = () => {
                             onChange={(e) => setpassword(e.target.value)}
                             className="w-full p-2 border border-gray-300 rounded-l shadow focus:outline-none "
                             placeholder="Enter you password"
+                            required
                         ></input>
 
                         <button type="submit" className="block w-full p-3 font-bold text-white bg-blue-500 rounded-l">

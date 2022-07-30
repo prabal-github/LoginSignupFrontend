@@ -55,7 +55,8 @@ const Signup = () => {
                             onChange={(e) => setname(e.target.value)}
                             className="w-full p-2 border border-gray-300 rounded-l shadow focus:outline-none "
                             placeholder="Enter you name"
-                        ></input>
+                            required
+                            ></input>
                         
                         <input
                             type="email"
@@ -63,7 +64,8 @@ const Signup = () => {
                             onChange={(e) => setemail(e.target.value)}
                             className="w-full p-2 border border-gray-300 rounded-l shadow focus:outline-none "
                             placeholder="Enter you email"
-                        ></input>
+                            required
+                            ></input>
 
                         <input
                             type="password"
@@ -71,6 +73,7 @@ const Signup = () => {
                             onChange={(e) => setpassword(e.target.value)}
                             className="w-full p-2 border border-gray-300 rounded-l shadow focus:outline-none "
                             placeholder="Enter you password"
+                            required
                         ></input>
 
                         <button type="submit" className="block w-full p-3 font-bold text-white bg-blue-500 rounded-l">

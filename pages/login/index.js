@@ -17,7 +17,7 @@ const Login = () => {
             .then((res) => {
                 console.log(res.data);
                 if (!res.data.token) {
-                    window.alert(res.data.msg);
+                    window.alert(res.data.err);
                 } else {
                     localStorage.setItem('token', res.data.token);
                     router.replace('/')

@@ -3,7 +3,7 @@ import axios from 'axios'
 import { useRouter } from 'next/router'
 
 const Signup = () => {
-    
+
     const router=useRouter();
     const [name, setname] = useState("")
     const [email, setemail] = useState("")
@@ -74,6 +74,7 @@ const Signup = () => {
                             className="w-full p-2 border border-gray-300 rounded-l shadow focus:outline-none "
                             placeholder="Enter you password"
                             required
+                            minLength='4'
                         ></input>
 
                         <button type="submit" className="block w-full p-3 font-bold text-white bg-blue-500 rounded-l">

@@ -13,7 +13,7 @@ const Login = () => {
     const handleLogin = (e) => {
         e.preventDefault();
         const data = { email: email, password: password };
-        axios.post('http://localhost:5000/auth/login', data)
+        axios.post('https://login-signup-backend.herokuapp.com/auth/login', data)
             .then((res) => {
                 console.log(res.data);
                 if (!res.data.token) {

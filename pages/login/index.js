@@ -13,7 +13,7 @@ const Login = () => {
     const handleLogin = (e) => {
         e.preventDefault();
         const data = { email: email, password: password };
-        axios.post('https://loginsignupbackend-production.up.railway.app/auth/login', data)
+        axios.post(process.env.NEXT_PUBLIC_BACKEND_API + '/auth/login', data)
             .then((res) => {
                 console.log(res.data);
                 if (!res.data.token) {

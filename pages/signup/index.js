@@ -4,7 +4,7 @@ import { useRouter } from 'next/router'
 
 const Signup = () => {
 
-    const router=useRouter();
+    const router = useRouter();
     const [name, setname] = useState("")
     const [email, setemail] = useState("")
     const [password, setpassword] = useState("")
@@ -12,7 +12,7 @@ const Signup = () => {
     const handleRegister = (e) => {
         e.preventDefault();
         const data = { name: name, email: email, password: password };
-        axios.post('https://loginsignupbackend-production.up.railway.app/auth/register', data)
+        axios.post(process.env.NEXT_PUBLIC_BACKEND_API + '/auth/register', data)
             .then((res) => {
                 console.log(res.data);
                 if (!res.data.token) {
@@ -56,8 +56,8 @@ const Signup = () => {
                             className="w-full p-2 border border-gray-300 rounded-l shadow focus:outline-none "
                             placeholder="Enter you name"
                             required
-                            ></input>
-                        
+                        ></input>
+
                         <input
                             type="email"
                             value={email}
@@ -65,7 +65,7 @@ const Signup = () => {
                             className="w-full p-2 border border-gray-300 rounded-l shadow focus:outline-none "
                             placeholder="Enter you email"
                             required
-                            ></input>
+                        ></input>
 
                         <input
                             type="password"

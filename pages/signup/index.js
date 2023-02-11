@@ -12,7 +12,7 @@ const Signup = () => {
     const handleRegister = (e) => {
         e.preventDefault();
         const data = { name: name, email: email, password: password };
-        axios.post('https://login-signup-backend.herokuapp.com/auth/register', data)
+        axios.post('https://loginsignupbackend-production.up.railway.app/auth/register', data)
             .then((res) => {
                 console.log(res.data);
                 if (!res.data.token) {

@@ -13,7 +13,7 @@ const Login = () => {
     const handleLogin = (e) => {
         e.preventDefault();
         const data = { email: email, password: password };
-        axios.post('https://login-signup-backend.herokuapp.com/auth/login', data)
+        axios.post('https://loginsignupbackend-production.up.railway.app/auth/login', data)
             .then((res) => {
                 console.log(res.data);
                 if (!res.data.token) {
@@ -76,9 +76,9 @@ const Login = () => {
                             Do not have an account?
                             <Link href="/signup">
                                 <a className="text-red-600 hover:text-red-700 focus:text-red-700 transition duration-200 ease-in-out"
-                            > Register</a>
+                                > Register</a>
                             </Link>
-                            
+
                         </p>
                     </form>
                 </div>
